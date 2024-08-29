@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "*.twig",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

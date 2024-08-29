@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BookingV2 {% endblock %}
+
+{% block body %}<h1><strong>Hotel</strong>: your home comfort in Leiria!</h1>   
+
+<div>
+    Browse through {{numberOfStarships}} rooms!
+
+
+    {% if numberOfStarships %}
+    <p>
+        {# Do you think "shipload" will pass the legal team? #}
+        That's a beautiful hotel
+    </p>
+    {% endif %}
+</div>
+
+<div>
+    <h2> My Hotel</h2>
+    <table>
+        <td>{{myShip.name}}</td>
+    </table>
+
+</div>
+{% endblock %}
