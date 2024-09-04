@@ -15,10 +15,13 @@ class MainController extends AbstractController
     {
         $roomCount = 457;
         $room = [
-            'name'=> 'USS XXXXXXX',
-            'class' => 'Garden',
-            'captain' => 'Jean-Luc Pickles',
-            'status' => 'under construction',
+           "id" =>2,
+            "hotelId"=>3,
+            "name"=>'Pardal',
+            "roomType"=>'suite',
+            "description"=>'These room offers us an amazing thinh that we vcan extrapollate mentally',
+            "price"=>150,
+            "availability"=>'Available',
         ];
 
         return $this->render('main/homepage.html.twig', ['numberOfRooms' => $roomCount, 'room'=>$room]);

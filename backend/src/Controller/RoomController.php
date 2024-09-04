@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RoomController extends AbstractController
 {
-    #[Route('/rooms/{id<\d+>}', name: 'app_room_show' )]
+    #[Route('/room/{id<\d+>}', name: 'app_room_show' )]
     public function show(int $id, RoomRepository $repository): Response
     {
         $room = $repository->find($id);

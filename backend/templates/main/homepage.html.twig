@@ -18,9 +18,20 @@
 
 <div>
     <h2> My Hotel</h2>
-    <table>
-        <td>{{room.name}}</td>
-    </table>
+<table>
+  <tr>
+    <th>Name</th>
+    <td>
+        <a href="{{ path("app_room_show",{ id: room.id }) }}">
+        {{ room.name}}
+        </a>  
+    </td>
+  </tr>
+  <tr>
+    <th>Class</th>
+    <td>{{ room.roomType }}</td>
+  </tr>
+</table>
 
 </div>
 {% endblock %}
