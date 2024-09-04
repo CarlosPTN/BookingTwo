@@ -5,10 +5,10 @@
 {% block body %}<h1><strong>Hotel</strong>: your home comfort in Leiria!</h1>   
 
 <div>
-    Browse through {{numberOfStarships}} rooms!
+    Browse through {{numberOfRooms}} rooms!
 
 
-    {% if numberOfStarships %}
+    {% if numberOfRooms %}
     <p>
         {# Do you think "shipload" will pass the legal team? #}
         That's a beautiful hotel
@@ -19,7 +19,7 @@
 <div>
     <h2> My Hotel</h2>
     <table>
-        <td>{{myShip.name}}</td>
+        <td>{{room.name}}</td>
     </table>
 
 </div>

@@ -13,15 +13,15 @@ class MainController extends AbstractController
     #[Route('/')]
     public function homepage(): Response
     {
-        $starshipCount = 457;
-        $myShip = [
+        $roomCount = 457;
+        $room = [
             'name'=> 'USS XXXXXXX',
             'class' => 'Garden',
             'captain' => 'Jean-Luc Pickles',
             'status' => 'under construction',
         ];
 
-        return $this->render('main/homepage.html.twig', ['numberOfStarships' => $starshipCount, 'myShip'=>$myShip]);
+        return $this->render('main/homepage.html.twig', ['numberOfRooms' => $roomCount, 'room'=>$room]);
    
     }
 }
