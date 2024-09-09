@@ -47,5 +47,12 @@ class Room
     {
         return $this->availability->value;
     }
-
+    public function getStatusImageFilename():string
+    {
+        return match ($this-> availability) {
+            RoomStatusEnum::WAITING => 'images/status-waiting.png',
+            RoomStatusEnum::IN_PROGRESS => 'images/status-in-progress.png',
+            RoomStatusEnum::COMPLETED => 'images/status-complete.png',
+        };
+    }
 }

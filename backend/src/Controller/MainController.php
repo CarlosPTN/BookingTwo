@@ -14,7 +14,7 @@ use App\Model\Room;
 // every page in symfony is a route controller
 class MainController extends AbstractController
 {
-    #[Route('/')]
+    #[Route('/', name: 'app_homepage')]
     public function homepage( RoomRepository $repository): Response
     {
         $roomCount = 457;
