@@ -11,7 +11,7 @@ class Room
         private string $roomType,
         private string $description,
         private int $price,
-        private string $availability,
+        private RoomStatusEnum $availability,
     )  {   
     }
 
@@ -39,9 +39,13 @@ class Room
     {
         return $this->price;
     }
-    public function getAvailability(): string 
+    public function getAvailability(): RoomStatusEnum 
     {
         return $this->availability;
+    }
+    public function getStatusString():string
+    {
+        return $this->availability->value;
     }
 
 }

@@ -10,10 +10,13 @@
         {% endblock %}
 
         {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
+
+        <img src="{{asset('images/logo_branco.png')}}" alt="logo">
         {% block body %}{% endblock %}
     </body>
 </html>

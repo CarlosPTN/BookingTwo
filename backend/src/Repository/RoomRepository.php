@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 use App\Model\Room;
+use App\Model\RoomStatusEnum;
 use Psr\Log\LoggerInterface;
 
 class RoomRepository
@@ -22,15 +23,16 @@ class RoomRepository
                 'suite',
                 'These room offers us an amazing thinh that we vcan extrapollate mentally',
                 110,
-                'Available',
-            ),  new Room(
+                RoomStatusEnum::COMPLETED,
+            ),  
+            new Room(
                 2,
                 3,
                 'Pardal',
                 'suite',
                 'These room offers us an amazing thinh that we vcan extrapollate mentally',
                 150,
-                'Available',
+                RoomStatusEnum::WAITING,
             ),
             
         ];
